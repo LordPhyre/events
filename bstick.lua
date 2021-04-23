@@ -1,5 +1,4 @@
-local stick_knockback = 40 --how hard the stick smacks kids. recommended min: 35
-local stick_bounce_reach = 25 --selecting distance of bouncing
+local stick_bounce_reach = 10 --selecting distance of bouncing
 local stick_bounce_timeout = 0.1 --bounce limiter in seconds. recommended min: 0.1
 events_timeouts = {}
 events_jumpouts = {}
@@ -11,7 +10,7 @@ minetest.register_craftitem("events:broomstick", {
     stack_max = 1,
     wield_scale = {x = 2, y = 2, z = 2},
     on_drop = function() end,
-    range = stick_pointing_distance,
+    range = stick_bounce_reach,
 
     on_place = function(itemstack, placer, pointed_thing)
 
